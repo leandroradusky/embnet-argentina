@@ -1,0 +1,24 @@
+#Usage : $1 pdb name . $2 chain. Returns Max RenNo
+
+#here I extract the secuene of ResNos in the pdb
+grep "^ATOM.\{17\}$2" $1 | sed "s/.\{22\}\(.\{4\}\).*/\1/" | uniq  > "$1".origResNo.tmp
+
+#here i generate the sequenece I need to use
+seq -w 9999 | sed 's/\(^0*\)0/\1\ /g' | sed 's/\(^0*\)0/\1\ /g'  | sed 's/\(^0*\)0/\1\ /g'  | sed 's/\(^0*\)0/\1\ /g' | head -n `cat "$1".origResNo.tmp | wc -l  ` > "$1".newResNo.tmp
+
+exec 3<"$1".origResNo.tmp
+exec 4<"$1".newResNo.tmp
+
+while IFS= read -r line1 <&3
+      IFS= read -r line2 <&4
+do
+     #this make the replacement
+grep "^ATOM.\{17\}$2" $1 | grep "^\(.\{22\}\)$line1" | sed "s/\(.\{22\}\)$line1\(.*\)/\1$line2\2/" 
+     #sleep 0.2
+done
+
+#for debuging
+#paste origResNo.tmp newResNo.tmp 
+
+#we clean the desk
+rm "$1".origResNo.tmp "$1".newResNo.tmp

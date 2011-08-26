@@ -1,0 +1,43 @@
+<?xml version ='1.0' encoding ='UTF-8' ?>
+<definitions name='Scramble'
+targetNamespace='http://localhost/WSEMBNet/Server/scramble.wdsl'
+xmlns:tns='http://localhost/WSEMBNet/Server/scramble.wdsl'
+xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+xmlns='http://schemas.xmlsoap.org/wsdl/'> 
+
+<message name='runAppRequest'>
+<part name='symbol' type='xsd:string'/>
+</message>
+<message name='runAppResponse'>
+<part name='Result' type='xsd:string'/>
+</message>
+
+<portType name='ScramblePortType'>
+<operation name='runApp'>
+<input message='tns:runAppRequest'/>
+<output message='tns:runAppResponse'/>
+</operation>
+</portType> 
+
+<binding name='ScrambleBinding' type='tns:ScramblePortType'>
+<soap:binding style='rpc'
+transport='http://schemas.xmlsoap.org/soap/http'/>
+<operation name='runApp'>
+<soap:operation soapAction='urn:localhost-scramble#runApp'/>
+<input>
+<soap:body use='encoded' namespace='urn:localhost-scramble'
+encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+</input>
+<output>
+<soap:body use='encoded' namespace='urn:localhost-scramble'
+encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+</output>
+</operation>
+</binding> 
+
+<service name='ScrambleService'>
+<port name='ScramblePort' binding='ScrambleBinding'>
+<soap:address location='http://localhost/WSEMBNet/Server/runApp.php'/>
+</port>
+</service>
+</definitions>

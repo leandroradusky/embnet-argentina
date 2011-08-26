@@ -1,0 +1,7 @@
+#!/bin/sh
+
+#Usage ./nnchains pdb 
+#Returns the line numbers of those TERs of unnamed chains in the pdb
+
+
+grep -n -B 1 '^TER' $1 | grep '^ATOM.\{17\}\ ' | grep  -o '^\w*' 

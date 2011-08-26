@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#Usage ./nnchains pdb number_of_unnamed_chain
+#Returns the ATOM records of the specified unnamed chain
+
+FRUST_HOME=`dirname "$0"`
+
+
+terorder='1';
+preterline='1';
+for terline in `$FRUST_HOME/nnchains $1`
+do
+{
+   if [ $terorder -eq $2 ];
+   then
+      head -n $terline $1 | tail -n +$preterline | grep '^ATOM.\{17\}\ \|^TER';
+   fi
+   preterline=$(($terline + 2));
+   terorder=$(($terorder + 1));
+}
+done;
+

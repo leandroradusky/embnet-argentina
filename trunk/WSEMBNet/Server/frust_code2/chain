@@ -1,0 +1,11 @@
+#!/bin/bash
+#Usage : $1 pdb name . $2 chain. Returns ATOM records for the specified chain ID
+
+terline=`grep -n -B 1 "^TER" $1 | grep -m 1 ".\{20\} $2 " | grep  -o "^\w*"`
+
+if [ ! $terline ]
+then 
+   grep "^ATOM.\{17\}$2" $1
+else
+   head -n $terline $1 | grep "^ATOM.\{17\}$2" 
+fi
