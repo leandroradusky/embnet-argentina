@@ -1,0 +1,166 @@
+
+html, body {
+	background-color:#EEEEEE;
+	background-image:url(imagenes/lineasFondo.gif);
+}
+
+#mainContent {
+	margin:0px;
+}
+
+
+#info {
+	background-color:#FFFFFF;
+	width:740px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#666666;
+	margin-top:40px;
+}
+
+#top {
+	background:url("imagenes/barraSuperior.gif") repeat-x;
+	width:740px;
+	height:24px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#0063a7;
+	font-weight:bold;
+}
+
+#banner {
+	background:url("imagenes/banner.jpg");
+	width:702px;
+	height:123px;
+	margin-top:10px;
+	margin-left:20px;
+}
+
+#description{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#666666;
+	padding-left:30px;
+	margin-top:40px;
+	padding-bottom:50px;
+	width:680px;
+}
+
+#links {
+	background-color:#eff9fc;
+	margin-left:0px;
+	width:690px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#01488f;
+	margin-bottom:20px;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+#links a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#01488f;
+	padding-left:7px;
+	padding-right:7px;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+#charge {
+	background-color:#f8f8f8;
+	border:1px solid #d9d9d9;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	padding-top:0px;
+	padding-left:20px;
+	margin-bottom:50px;
+	padding-bottom:0px;
+}
+
+#buttom{
+	margin-right:10px;
+}
+
+#buttom input {
+	background-color:#01488f;
+	color:#FFFFFF;
+	padding-left:10px;
+	padding-right:10px;
+	border-bottom:2px solid #013263;
+	border-right:2px solid #013263;
+	border-left:1px solid #0160be;
+	border-top:1px solid #0160be;
+}
+
+#buttom2{
+	background-color:#01488f;
+	color:#FFFFFF;	
+	padding-left:10px;
+	padding-right:10px;
+	border-bottom:2px solid #013263;
+	border-right:2px solid #013263;
+	border-left:1px solid #0160be;
+	border-top:1px solid #0160be;
+	text-align: center;
+}
+
+#bottom {
+	background:url("imagenes/barraInferior.gif") repeat-x;
+	width:733px;
+	height:19px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#FFFFFF;
+	padding-right:7px;
+	padding-top:2px;
+}
+
+.grayButtom {
+	background-color:#777777;
+	color:#FFFFFF;
+	border-bottom:2px solid #333333;
+	border-right:2px solid #333333;
+	border-left:1px solid #555555;
+	border-top:1px solid #555555;
+}
+
+/********** Fonts **********/
+
+.topLightBlue {
+	color:#5d9bb7;
+	padding-right:365px;
+
+}
+
+.topGray {
+	color:#999999;
+	text-align:right;
+	font-size:11px;
+	font-weight:normal;
+}
+
+.title {
+	color:#01488f;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.title2 {
+	color:#01488f;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.blueBold {
+	color:#01488f;
+	font-weight:bold;
+}
+
+
+/********** fin Fonts **********/
+
+
+

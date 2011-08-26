@@ -1,0 +1,17 @@
+<run>
+<app>Frustratometer</app>
+<date>201108251314315883</date>
+<mail></mail>
+<parameters>
+<parameter>
+<name>protein_file</name>
+<value>
+4blm2.pdb</value>
+</parameter>
+<parameter>
+<name>protein_name</name>
+<value>
+</value>
+</parameter>
+</parameters>
+</run>

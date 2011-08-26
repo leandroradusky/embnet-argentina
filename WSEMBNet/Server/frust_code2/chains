@@ -1,0 +1,6 @@
+
+# This prints the chains present in the pdb
+
+# Usage : $1 pdb name . Returns : leters of the chains IDs
+
+grep "^ATOM " $1 |  sed 's/.\{21\}\(.\{1\}\).*/\1/' | sort -u | uniq

@@ -1,0 +1,92 @@
+<apps>
+	<app> <!-- Frustratometer -->
+		<name>Frustratometer</name>
+		<visible>Yes</visible>
+		<desc> <![CDATA[ 
+			The Frustratometer is an <a href="frustra_elt.php">Energy Landscape Theory</a> 
+			inspired algorithm that aims at quantifying the degree of <a href="frustra_lf.php">
+			local frustration</a> manifested in protein molecules. Frustration is a useful concept 
+			for gaining insight to the proteins biological behavior by analyzing how the energy is 
+			distributed in protein structures and how mutations or conformational changes shift 
+			the energy distributions. Sites of high local frustration often indicate biologically 
+			important regions such as binding or allosteric sites. Minimally frustrated linkages 
+			constitute a stable folding core of the molecule. ]]>		
+		</desc>
+		<links>
+			<link>
+				<text>Documentation</text>
+				<desc>Documentation</desc>
+				<url>frustra_documentation.php</url>
+			</link>
+			<link>
+				<text>Study Cases</text>
+				<desc>Gallery of local frustration distributions</desc>
+				<url>frustra_study_cases.php</url>
+			</link>
+			<link>
+				<text>Terms and Conditions</text>
+				<desc>Terms and Conditions</desc>
+				<url>frustra_tac.php</url>
+			</link>
+			<link>
+				<text>FAQ</text>
+				<desc>Frequently Asked Questions</desc>
+				<url>frustra_faq.php</url>
+			</link>
+			<link>
+				<text>Sample Output</text>
+				<desc>Sample Output</desc>
+				<url>frustra_examples.php</url>
+			</link>
+		</links>
+		<fields>
+			<field>
+				<name>protein_file</name>
+				<type>prot_file</type>
+				<text>Upload your protein PDB file: </text>
+			</field>
+			<field>
+				<name>protein_name</name>
+				<type>ftp_pdb</type>
+				<text>Or specify the protein name in PDB: </text>
+			</field>
+		</fields>
+	</app>
+	<app> <!-- Frustratometer -->
+		<name>Vip</name>
+		<visible>No</visible>
+		<desc> <![CDATA[ 
+			Description for VIP. ]]>		
+		</desc>
+		<links>
+			<link>
+				<text>Documentation</text>
+				<desc>Documentation</desc>
+				<url>frustra_documentation.php</url>
+			</link>
+		</links>
+		<fields>
+			<field>
+				<name>protein_file</name>
+				<type>prot_file</type>
+				<text>Upload your protein PDB file: </text>
+			</field>
+			<field>
+				<name>protein_name</name>
+				<type>ftp_pdb</type>
+				<text>Or specify the protein name in PDB: </text>
+			</field>
+			<field>
+				<name>sequence</name>
+				<type>text</type>
+				<text>Specify alignment: </text>
+			</field>
+			<field>
+				<name>tree</name>
+				<type>file</type>
+				<text>Upload tree: </text>
+			</field>
+			
+		</fields>
+	</app>
+</apps>

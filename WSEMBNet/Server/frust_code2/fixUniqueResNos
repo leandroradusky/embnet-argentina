@@ -1,0 +1,26 @@
+#fix ResNo to be unique in all pdb . This is usefull when for example you have 2 subunits , chains, with two ResNos 29 .
+
+FRUST_HOME=`dirname "$0"`
+
+offsetResNo=0;
+
+if [ `$FRUST_HOME/chains $1 | wc -w ` -lt 2 ] 
+then 
+
+grep "^ATOM " $1
+
+else
+
+for ch in `$FRUST_HOME/chains $1` ;
+do
+
+$FRUST_HOME/chain $1  $ch | $FRUST_HOME/renumber_pdb.pl - - $offsetResNo 
+
+inc=`$FRUST_HOME/maxResNo $1 $ch`;
+
+offsetResNo=`expr $offsetResNo + $inc`;
+
+done
+
+fi
+ 
